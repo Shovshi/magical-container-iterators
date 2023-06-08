@@ -23,7 +23,7 @@ namespace ariel
         {
         private:
             MagicalContainer *ascIter;
-            int i;
+            size_t i;
 
         public:
             AscendingIterator();
@@ -36,7 +36,7 @@ namespace ariel
             bool operator<(const AscendingIterator &other) const;
             bool operator>(const AscendingIterator &other) const;
             int operator*();
-            AscendingIterator operator++();
+            AscendingIterator &operator++();
             AscendingIterator begin();
             AscendingIterator end();
         };
@@ -45,7 +45,7 @@ namespace ariel
         {
         private:
             MagicalContainer *crossIter;
-            int i;
+            size_t i;
 
         public:
             SideCrossIterator();
@@ -58,7 +58,7 @@ namespace ariel
             bool operator<(const SideCrossIterator &other) const;
             bool operator>(const SideCrossIterator &other) const;
             int operator*();
-            SideCrossIterator operator++();
+            SideCrossIterator &operator++();
             SideCrossIterator begin();
             SideCrossIterator end();
         };
@@ -67,7 +67,7 @@ namespace ariel
         {
         private:
             MagicalContainer *primeIter;
-            int i;
+            size_t i;
 
         public:
             PrimeIterator();
@@ -80,7 +80,7 @@ namespace ariel
             bool operator<(const PrimeIterator &other) const;
             bool operator>(const PrimeIterator &other) const;
             int operator*();
-            PrimeIterator operator++();
+            PrimeIterator &operator++();
             PrimeIterator begin();
             PrimeIterator end();
         };
