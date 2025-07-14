@@ -1,71 +1,38 @@
-# Title: The Quest for the Magical Iterators
+# Magical Container & Custom Iterators 🧙‍♂️✨
 
-Background Story: In the ancient kingdom of Iteratia, there exists a magical container that has the power to hold different types of mystical elements. These elements have various properties and abilities that are essential for maintaining the balance of the kingdom. Over time, the knowledge of harnessing the power of these elements was lost. It is said that three powerful iterators were created to unlock the potential of the magical container. These iterators represent different orders of traversal through the container, revealing different aspects of the mystical elements. The kingdom is now in turmoil, and the wise King seeks the help of a talented programmer to rediscover the power of these iterators.
-Objective: In this assignment, you will create a custom container class named "MagicalContainer" to store mystical elements represented by integers. You will also implement three custom iterator classes, each representing a different order of traversal through the container. By the end of this assignment, you should have a deeper understanding of custom iterators and their applications in C++.
+## 🗺️ Overview
 
-Instructions:
-1.	Create a user-defined container class named "MagicalContainer" that can store integers representing mystical elements. Implement necessary methods for adding elements, removing elements, and retrieving the size of the container. You can use a dynamic array or any other suitable data structure for internal storage.
-2.	Create three custom iterator classes named "AscendingIterator", "SideCrossIterator", and "PrimeIterator" that will allow traversal of elements in the MagicalContainer class in ascending order, cross order, and prime numbers only, respectively. Each iterator should support the following operations:
+**The Quest for the Magical Iterators** is a fantasy-themed C++ project that implements a custom container and multiple traversal strategies using advanced iterator patterns.
 
-operations:
+In the ancient land of **Iteratia**, a magical container was said to hold the balance of the kingdom. Only by mastering the secrets of the **three iterators** can its power be fully restored.
 
-•	Default constructor
+This project showcases:
+- Custom container implementation in C++
+- Iterator design and operator overloading
+- Traversal logic: ascending, cross-order, and prime-filtered
+- Deep understanding of OOP and STL-style behavior
 
-•	Copy constructor
+---
 
-•	Destructor
+## 🧪 Features
 
-•	Assignment operator
+- `MagicalContainer` – a dynamic container for mystical elements (integers)
+- `AscendingIterator` – iterates in ascending order
+- `SideCrossIterator` – iterates in cross pattern (start-end-start-end...)
+- `PrimeIterator` – iterates only over prime elements
+- All iterators support:
+  - Copy/assignment constructors
+  - Operator overloading: `==`, `!=`, `<`, `>`, `*`, `++`
+  - Strong exception safety
+  - O(1) memory and time per iterator step
+- Live-update support: iterators reflect changes in container dynamically
 
-•	Equality comparison (operator==)
+---
 
-•	Inequality comparison (operator!=)
+## ⚙️ How to Run
 
-•	GT, LT comparison (operator>, operatorn<) all comparison operators only valid for iterators of the same type of order and should compair the location of the iterator in the container and not the element inside. Example bellow. Using operators on iterators of differant type or differant containers should throw an examtion. 
- 
-•	Dereference operator (operator*)
-
-•	Pre-increment operator (operator++)
-
-•	begin(type): Returns the appropriate iterator (ascending, cross, or prime) pointing to the first element of the container based on the specified type.
-
-•	end(type): Returns the appropriate iterator (ascending, cross, or prime) pointing one position past the last element of the container based on the specified type.
-
-For expample: say our container contains the numbers 1,2,4,5,14 the iterators will return the elements in the following order:
-
-• Ascending: 1,2,4,5,14   
-operator> should return true on 5>2, 14>1
-
-• prime: 2,5
-operator> should return true on 5>2
-• cross: 1,14,2,5,4  (one from the start then one from the end)
-operator> should return true on 5>14, 2>1, 4>14
-
-**All iterators should work in O(1) in both memory and time complexity.**
-Iterators should **NOT** be detached from the main container. If one add's an element to a container after an iterator is created the iterator should know the element return it should its turn will come. 
-
-
-**חלק ב**: יש לכתוב: 
-
-*מימוש מלא למטלה כדי שהטסט יעבור.
-  
-כיתבו את כל הקבצים הדרושים כך שהפקודות הבאות יעבדו ללא שגיאות:
-
-<div dir='ltr'>
-
-	bash grade
-
-</div>
-
-מומלץ גם להריץ:
-
-<div dir='ltr'>
-
-    make tidy
-    make valgrind
-
-</div>
-
-אין לשנות קבצים קיימים אלא רק להוסיף קבצים חדשים.
-
-בהצלחה
+```bash
+make
+bash grade      # run test cases
+make tidy       # formatting
+make valgrind   # memory checks
